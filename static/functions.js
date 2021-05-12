@@ -63,5 +63,5 @@
     var printTable = document.getElementById(table).innerHTML;
     document.body.innerHTML = printTable;
     window.print();
-    location.replace(urlRedirect + "/print")
+    location.replace(urlRedirect);
     } 
