@@ -1,3 +1,4 @@
 #/bin/bash
 
-python3 /home/$USER/Desktop/kiosk-server-1.5/app.py
+cd /home/lhs/kiosk-server-1.7
+python3 ./app.py
