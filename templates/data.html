@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html id="background" lang="en">
+    <head>
+        <title>Timetable | Timetable Kiosk</title>
+        <!--Icons, link to css file and other stuff.-->
+        <meta http-equiv="refresh" content="{{resetTime}};url={{serverAddress}}" id="url">  
+        <meta charset="utf-8"> 
+        <link href="static/main.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
+        <link href="static/custom.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
+        <link href="static/print.css?q={{random}}" rel="stylesheet" type="text/css" media="print">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+    <script src="{{url_for('static', filename='functions.js')}}"></script> 
+    <body onload="startDatetime();">
+        <!--Control bar and buttons.-->  
+        <div class="control-pos control-clr" >
+            <div id="clock"></div>
+            <div id="date"></div>
+            <input type="button" class="button-pos button-clr" id="print" name="print" value="Print" onclick="printContent('data')"/>
+            <input type="button" class="button-pos button-clr" name="logout" id="logout" value="Logout" onclick="location.href = '/login'">
+        </div>
+        <!--Timetable-->
+        <div class="data-pos data-clr">
+                <h1>Timetable</h1>
+            <div id="data">
+              <h3 class="username-clr">User: {{username}}</h3>
+               {{table}}
+            </div>
+        </div>
+        <!--Daily Notices-->
+        <div class="notices-pos notices-clr">
+            <div class="subheading-pos subheading-clr">
+                <h1>Daily Notices</h1>
+                <br>
+            </div>
+            {{notices}}
+        </div>  
+    </body>
+    <footer>
+        <div class="footer-pos footer-clr">   
+            <small>Property of Lithgow High School, {{version}},<br> 
+            Written by Bradley Turrell and Kaden Lucas.<br></small> 
+        </div>
+        <div class="copyright-pos copyright-clr">
+            <small>Copyright © 2021 · All Rights Reserved<br>
+                'Papercut' Artworks by Connor De Vries</small>
+        </div> 
+    </footer>   
+</html>
+  

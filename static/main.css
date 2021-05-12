@@ -1,0 +1,172 @@
+/*
+WARNING: IT IS HIGHLY RECOMMENDED THAT YOU DON'T EDIT THIS FILE, IF YOU WISH TO CUSTOMISE THE CSS PLEASE EDIT 'custom.css'.
+*/
+
+* {padding: 0; margin: 0;}
+
+/*Universal*/
+
+h1 {
+    font-size: 3.5vh;
+    text-align: center;
+    text-shadow: 2px;
+    padding: 1vh;
+}
+
+.subheading-pos {
+    font-size: 1.8vh;
+    text-align: center;
+    text-shadow: 2px;
+    padding: 1vh;
+}
+
+.footer-pos {
+    position: absolute;
+    bottom: 1%;
+    font-size: 13pt;
+    left: 1%;
+}
+
+.copyright-pos {
+    position: absolute;
+    font-size: 13pt;
+    bottom: 1%;
+    right: 1%;
+}
+
+.control-pos {
+    padding-top: 6px;
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+}
+
+/*Login Page (index.html)*/
+.container-pos {
+    margin-top: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    height: 68vh;
+    width: 40vh;
+    border-radius: 3vh;
+}
+
+  .input-pos {
+    text-align: center;
+    text-shadow: 2px;
+    padding: 1vh;
+    padding-top: 3vh;
+    outline: 0;   
+    outline-width: 0;
+    outline: none;
+}
+
+.logo-pos {
+    width: 18vh;
+    height: 18vh;
+}
+
+/*Data page (data.html)*/
+
+.data-pos {
+    position: absolute;
+    transform: translate(-10%,-50%);
+    height: 70vh;
+    width: 50vh;
+    border-radius: 30px 0px 0px 30px;
+    left: 10%;
+    top: 50%;
+    overflow-y: scroll;
+}
+
+.button-pos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+    font-size: 2vh;
+    width: 12vh;
+    height: 4vh;
+    border-radius: 0.8vh;
+    outline: none;
+    transition: 0.2s;
+}
+
+#data {
+    position: absolute;
+    left: 50px;
+}
+
+.username-pos {
+    padding-left: 10px;
+    max-width: 400px;
+    text-transform: lowercase;
+}
+
+.timetable.table {
+    font-family: 'Roboto', sans-serif;
+    max-height: 35%;
+    max-width: 80%;
+}
+
+.noticebanner-daily {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.small-caps {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Daily Notices*/
+
+.notices-pos {
+    position: absolute;
+    transform: translate(-10%,-50%);
+    height: 70vh;
+    width: 50vh;
+    border-radius: 30px 0px 0px 30px;
+    right: 2.5%;
+    top: 50%;
+    overflow-y: scroll;
+}  
+
+.content-block {
+    position: relative;
+    text-align: left;
+    width: 80%;
+    left: 5%;
+}
+
+.content-block li {
+    position: relative;
+    left: 5%;
+}
+
+.content-block img {
+    border-radius: 30px;
+}
+
+.notice-wrap {
+    padding-bottom: 10px;
+}
+/*loading circle with animation*/
+
+.loading-pos {
+    margin: 0;
+    left: 17.8vh;
+    bottom: 3vh;
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 5vh;
+    animation: 0.75s loading infinite linear;
+    display: none;
+}
+  
+  @keyframes loading {
+     to{
+         transform: rotate(360deg);
+    } 
+}

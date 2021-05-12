@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html id="background" lang="en">
+    <head>
+        <title>Login | Timetable Kiosk</title>
+         <!--Icons, link to css file and other stuff.-->
+         <meta charset="utf-8"> 
+         <link href="static/main.css?q={{random}}" rel="stylesheet" type="text/css">
+         <link href="static/custom.css?q={{random}}" rel="stylesheet" type="text/css">
+         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    </head>
+    <script src="{{url_for('static', filename='functions.js')}}"></script>
+    <body onload="startDatetime();">
+        <div class="control-pos control-clr">
+            <div id="clock"></div>
+            <div id="date"></div>
+        </div>
+        <!--Login Box-->
+        <div class="container-pos container-clr">
+            <div class="input-pos input-clr">
+                <img src="static/images/logo.png" class="logo-pos" alt="logo">
+                <div class="subheading">
+                    <h1>Login</h1>
+                    <p>Please enter your DET Credentials.</p>
+                    <strong>Full email and '@detnsw' will NOT work.</strong><br>
+                    <small>FOR STUDENT ACCOUNTS ONLY!</small><br>
+                </div>  
+                <form method="POST" action="/data">
+                <label for="username">Username:<br>
+                    <input type="text" id="username" name="username" placeholder="john.citizen1" style="text-align: center;">
+                </label><br>
+                <label for="password">Password:<br>
+                    <input type="password" id="password" name="password" style="text-align: center;">
+                </label><br>
+                    <input type="submit" id="submit" name="submit" value="Submit" onclick="loading();">
+                </form>
+                <div id="loading" class="loading-pos loading-clr"></div>
+            </div>     
+        </div> 
+    </body>   
+    <footer>
+        <div class="footer-pos footer-clr">
+            <br> 
+            <small>Property of Lithgow High School, {{version}},<br> 
+            Written by Bradley Turrell and Kaden Lucas.<br></small> 
+        </div>
+        <div class="copyright-pos copyright-clr">
+            <small>Copyright © 2021· All Rights Reserved<br>
+                'Papercut' Artworks by Connor De Vries</small>
+        </div>  
+    </footer>
+</html>

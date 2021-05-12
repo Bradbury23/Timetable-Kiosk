@@ -1,0 +1,217 @@
+/*
+This is the CSS customisation file, feel free to edit as you please. :)
+If you feel lost, please read the documentation (https://sites.google.com/timetablekioskdocumentation). 
+*/
+* {margin: 0; padding: 0;}
+
+/*Universal*/
+
+/*Edit these to change the colour of the clock and date.*/
+#date {
+  color: white;
+  font-size: 3vh;
+  font-family: 'Roboto', sans-serif;
+  top: 10px; 
+  right: 20px;
+  position: absolute;
+  text-align: right;
+}
+
+#clock {
+  color: white;
+  font-size: 3vh;
+  font-family: 'Roboto', sans-serif;
+  top: 10px; 
+  left: 20px;
+  position: absolute;
+  text-align: left;
+}
+
+/*Edit this to change All of the headings on both /login and /data (Login, Timetable, Daily Notices.)*/
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.subheading-clr {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/*/login*/
+#background {
+    background-image: url(images/wallpapers/wallpaper6.jpg);
+    background-size: (100vh, 100vh);
+    background-repeat: no-repeat;
+}
+
+/*Edit this to change the login container in /login/.*/
+.container-clr {
+  background-color: #333;  
+}
+
+/*Edit this to change the font and colour of the text within the input box.*/
+
+.input-clr{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*The following handles the outline around the input boxes when selected.*/
+
+input[type=text]:focus {
+    border: 3px solid rgb(6, 115, 218);
+}
+
+input[type=password]:focus {
+  border: 3px solid rgb(6, 115, 218);
+}
+
+/*Edit this in order to edit the submit button.*/  
+input[type=submit] {
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  border-color: #095ee3;
+  background-color:  #095ee3; 
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;
+  width: 12vh;
+  height: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.8vh; 
+  outline: 0;   
+  outline-width: 0;
+  outline: none;
+  transition: 0.2s;
+}
+
+/*Edit these to change the username and password input boxes.*/
+input[type=text] {
+  width: 20vh;
+  height: 3.5vh;
+  padding: 1vh; 
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid white;
+  font-family: Roboto; 
+  font-size: 10pt;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=password] {
+  width: 20vh;
+  height: 3.5vh;
+  padding: 1vh; 
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;  
+}
+
+
+/*Edit this to change the submit button's colour when hovering over it.*/
+input[type=submit]:hover {
+    border-color: orangered;
+    background-color: orangered;
+    color: white;
+}
+
+/*animation and class for loading circle*/
+.loading-clr {
+  border: 4px solid #0051ff;
+  border-top-color: white;
+}
+
+/*/data*/
+
+/*Edit these to change the colour of the buttons in /data.*/
+.button-clr {
+  border-color: #095ee3;
+  background-color:  #095ee3;
+  color:white;
+}
+
+/*Edit this to change the button's colour when hovering over it.*/
+.button-clr:hover {
+  border-color: orangered;
+  background-color: orangered;
+  color: white;
+}
+
+/*Edit this to change the colour and font of the username found above the timetable.*/
+.username-clr {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/*top bar that shows time, date and buttons.*/
+.control-clr {
+  background-color: #333;  
+}
+
+/*Edit this to customise the timetable box.*/
+.data-clr {
+  background-color: #333;
+}
+
+/*Edit this to customise the daily notices box.*/
+.notices-clr {
+  background-color: #333;
+}
+
+::-webkit-scrollbar {
+  width: 2vh;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 5px 5px 5px 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #095ee3;
+  border-radius: 1vh;
+  height: 5vh;
+  border: 20px solid #095ee3;
+}
+/*Edit these to change the text colour of the daily notices and timetable.*/
+
+.content-block h4 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notice-wrap {
+  color: white;
+}
+
+li {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-block p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.timetable-period {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.footer-clr {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: lightgrey;
+}
+
+.copyright-clr {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: lightgrey;
+}

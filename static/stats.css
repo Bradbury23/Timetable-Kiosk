@@ -1,0 +1,41 @@
+/*This .css file is exclusively used by '/stats'.*/
+*{margin: 0; padding: 0;}
+
+.stat-container-pos{
+    width: 70vh;
+    height: 60vh;
+    border-radius: 3vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stat-headings-pos {
+    position: absolute;
+    text-align: left;
+    padding-left: 3vh;
+    padding-top: 2vh;
+}
+
+.stat-headings-clr {
+    color: white;
+    font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stat-refresh-pos {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+    font-size: 2vh;
+    width: 12vh;
+    height: 4vh;
+    border-radius: 0.8vh;
+    outline: none;
+    transition: 0.2s;
+    left: 40%;
+    bottom: 10%;
+
+}
