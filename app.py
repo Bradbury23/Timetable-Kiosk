@@ -11,7 +11,7 @@ timeLimit = 30
 #Change this to where you can access your kiosk server (used in redirect and in auto-logout).
 serverAddress = "http://localhost:5000/login"
 #Change this to your sentral address.
-schoolName = 'schoolName' # E.G: lithgow-h
+schoolName = 'SchoolName' # E.G: lithgow-h
 sentralAddress = f"https://{schoolName}.sentral.com.au/portal/"
 sentralLoginAddress = f'https://{schoolName}.sentral.com.au/portal2/user/'
 dashboardAddress = sentralAddress + 'dashboard'
@@ -20,9 +20,12 @@ delim = ['(', ')', '>', '<', ':', '{', '}', ';', '$']
 logins, prints = [int(i) for i in open('stats', 'r').read().splitlines()]
 app = Flask(__name__)
 query = 0
-#Change this variable to control the time a user is locked out for after printing
-tempBan = 0.5*60
+#Change this variable to control the time a user is locked out for after printing.
+tempBan = 15*60 #15 minutes.
+#add users here to permanently ban them. 
+#Syntax is: {'username': username, 'ban': False, 'time': time()}
 blacklist = []
+#Leave this variable blank.
 username = ''
 
 #If hit, redirects client to /login.
@@ -97,11 +100,11 @@ def statLog():
     prints += 1
     with open('stats', 'w') as file:
         file.write(f'{logins}\n{prints}')
-    return render_template('print.html', serverAddress=serverAddress)
+    return redirect(serverAddress)
 
 @app.route('/stats', methods=['GET'])
 def stats():
     return render_template('stats.html', totalLogins=open('stats', 'r').read().splitlines()[0], totalPrints=open('stats', 'r').read().splitlines()[1])
 
 if __name__ == '__main__':
-    app.run(port=portNumber)
+    app.run(host="localhost", port=portNumber)
