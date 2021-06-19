@@ -3,27 +3,27 @@
 <html id="background" lang="en">
     <head>
         <title>Stats | Timetable Kiosk</title>
-         <!--Icons, links to css files and other stuff.-->  
-         <meta charset="utf-8"> 
-         <link href="static/main.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
-         <link href="static/custom.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
-         <link href="static/stats.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
-         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <!--Icons, links to css files and other stuff.-->  
+        <meta charset="utf-8"> 
+        <link href="static/main.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
+        <link href="static/custom.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
+        <link href="static/stats.css?q={{random}}" rel="stylesheet" type="text/css" media="screen">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
-    <script src="{{url_for('static', filename='functions.js')}}"></script>
+    <script src="{{url_for('static', filename='client.js')}}"></script>
     <body onload="startDatetime();">
         <div class="control-pos control-clr">
             <div id="clock"></div>
             <div id="date"></div>
         </div>
+        <!--Statistics box-->
         <div class="stat-container-pos container-clr">
             <h1 class="subheading">Kiosk Statistics</h1>
-            <h1 class="subheading">All data on this page is a placeholder.</h1>
             <div class="stat-headings-clr stat-headings-pos">
-                <h2>Total Logins: <!--{{totalLogins}}--></h3>
+                <h2>Total Logins: {{totalLogins}}</h3>
                 <br>
-                <h2>Total Prints: 17<!--{{totalPrints}}--></h3> 
+                <h2>Total Prints: {{totalPrints}}</h3> 
             </div>
             <button class="stat-refresh-pos button-clr" onclick="location.replace('/stats')">Refresh</button>
         </div>
@@ -31,7 +31,7 @@
     <footer>
         <div class="footer-pos footer-clr">
             <br> 
-            <small>Property of Lithgow High School, {{version}},<br> 
+            <small>Property of Lithgow High School,<br> 
             Written by Bradley Turrell and Kaden Lucas.<br></small> 
         </div>
         <div class="copyright-pos copyright-clr">

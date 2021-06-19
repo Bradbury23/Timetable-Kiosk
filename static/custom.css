@@ -38,12 +38,13 @@ h1 {
   color: white;
 }
 
-/*/login*/
 #background {
-    background-image: url(images/wallpapers/wallpaper6.jpg);
-    background-size: (100vh, 100vh);
-    background-repeat: no-repeat;
+  background-image: url(images/wallpapers/wallpaper6.jpg);
+  background-size: (100vh, 100vh);
+  background-repeat: no-repeat;
 }
+
+/*/login*/
 
 /*Edit this to change the login container in /login/.*/
 .container-clr {
